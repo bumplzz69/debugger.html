@@ -9,7 +9,9 @@
     "firefox": "./node_modules/.bin/start-firefox --start --location https://devtools-html.github.io/debugger-examples/",
     "chrome": "./node_modules/.bin/start-chrome",
     "license-check": "devtools-license-check",
-    "test": "jest --projects jest.config.js"
+    "test": "jest --projects jest.config.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "MPL-2.0",
@@ -30,7 +32,8 @@
     "react-dom": "^16.4.1",
     "react-dom-factories": "^1.0.2",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@sucrase/webpack-object-rest-spread-plugin": "^1.0.0",
@@ -52,5 +55,6 @@
     "postcss-url-mapper": "^1.2.0",
     "react-immutable-proptypes": "^2.1.0",
     "redux-logger": "=3.0.6"
-  }
+  },
+  "snyk": true
 }
