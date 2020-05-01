@@ -5,6 +5,12 @@
     "lodash": "^4.17.10",
     "ts-loader": "3",
     "typescript": "^2.9.2",
-    "webpack": "3"
-  }
+    "webpack": "3",
+    "snyk": "^1.316.2"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true
 }
