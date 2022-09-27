@@ -46,15 +46,17 @@
     "flow-react": "flow-coverage-report -i 'src/components/**/*.js' -t text",
     "nom": "node bin/nom",
     "diff": "node bin/diff",
-    "install": "prettier --write package.json"
+    "install": "prettier --write package.json",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.55",
+    "@babel/core": "^7.0.0",
     "@babel/parser": "^7.0.0-beta.55",
     "@babel/template": "^7.0.0-beta.55",
     "@babel/types": "^7.0.0-beta.55",
     "babel-plugin-transform-imports": "^1.5.0",
-    "codemirror": "^5.28.0",
+    "codemirror": "^5.58.2",
     "devtools-environment": "^0.0.6",
     "devtools-launchpad": "^0.0.147",
     "devtools-linters": "^0.0.4",
@@ -64,23 +66,24 @@
     "devtools-utils": "0.0.14",
     "fuzzaldrin-plus": "^0.6.0",
     "immutable": "^3.8.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "lodash-move": "^1.1.1",
     "lodash.kebabcase": "^4.1.1",
     "md5": "^2.2.1",
     "parse-script-tags": "^0.1.6",
     "pretty-fast": "^0.2.3",
     "prop-types": "^15.6.0",
-    "react": "16.4.1",
+    "react": "16.5.0",
     "react-aria-components": "^0.0.4",
-    "react-dom": "16.4.1",
+    "react-dom": "16.5.0",
     "react-immutable-proptypes": "^2.1.0",
     "react-inlinesvg": "^0.8.1",
     "react-redux": "^5.0.7",
     "react-transition-group": "^2.2.1",
     "reselect": "^4.0.0",
     "svg-inline-react": "^3.0.0",
-    "wasmparser": "^0.7.0"
+    "wasmparser": "^0.7.0",
+    "@snyk/protect": "latest"
   },
   "private": true,
   "workspaces": [
@@ -200,5 +203,6 @@
       "pre-commit": "yarn lint-staged",
       "pre-push": "yarn lint"
     }
-  }
+  },
+  "snyk": true
 }
